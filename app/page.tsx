@@ -1,6 +1,5 @@
 import CreateTodo from "@/components/create-todo";
 import TodoList from "@/components/todo-list";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
