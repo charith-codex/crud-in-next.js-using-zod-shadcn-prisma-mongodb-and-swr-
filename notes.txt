@@ -1,0 +1,25 @@
+npm i swr 
+https://swr.vercel.app/docs/getting-started
+
+npm i zod
+https://zod.dev/?id=installation
+
+npx shadcn@latest init
+https://ui.shadcn.com/docs/installation/next
+
+npx prisma init --datasource-provider mongodb
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb-typescript-mongodb
+
+npm i prisma
+npx prisma db push
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/install-prisma-client-typescript-postgresql#npx-prisma-db-push
+
+npx shadcn@latest add button
+npx shadcn@latest add card
+
+npx prisma studio
+https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/next-steps#explore-the-data-in-prisma-studio
+
+npx shadcn@latest add dialog form textarea input checkbox
+
+npm install @radix-ui/react-icons

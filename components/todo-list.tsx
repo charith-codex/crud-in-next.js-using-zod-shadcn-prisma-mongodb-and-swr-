@@ -1,8 +1,9 @@
 'use client';
-
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Todo } from '@prisma/client';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import useSWR from 'swr';
+import UpdateTodo from './update-todo';
+import DeleteTodo from './delete-todo';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -32,12 +33,16 @@ export default function TodoList() {
       {todoList.length === 0 ? (
         <Card>
           <CardContent className="text-center py-10">
-            <p className="text-muted-foreground">All done for today</p>
+            <p className="text-muted-foreground">All done for today!</p>
           </CardContent>
         </Card>
       ) : (
         todoList.map((todo) => (
-          <Card key={todo.id}>
+          <Card className="group relative" key={todo.id}>
+            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <UpdateTodo todo={todo} />
+              <DeleteTodo id={todo.id} />
+            </div>
             <CardHeader>
               <CardTitle>
                 <span className={todo.isCompleted ? 'line-through' : ''}>
